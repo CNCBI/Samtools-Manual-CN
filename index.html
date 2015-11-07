@@ -51,19 +51,11 @@ samtools bam2fq input.bam &gt; output.fastq
 <p>
 Samtools是一个用来处理BAM格式（SAM的二进制格式，译者注）的比对文件的工具箱。它能够输入和输出SAM（序列比对/图谱）格式的文件，对其进行排序、合并、建立索引等处理，还可以快速获取任意区域的reads。
 </p><p>
-Samtools is designed to work on a stream. It regards an input file `-'
-as the standard input (stdin) and an output file `-' as the standard
-output (stdout). Several commands can thus be combined with Unix
-pipes. Samtools always output warning and error messages to the standard
-error output (stderr).
+Samtools被设计成以数据流的形式工作。它把标准输入作为输入（stdin）文件 `-' ，把标准输出作为输出（stdout）文件 `-' 。因此多个命令可以通过Unix的管道技术结合起来。Samtools总是把警告和错误消息输出到标准错误输出（stderr）。
 </p><p>
-Samtools is also able to open a BAM (not SAM) file on a remote FTP or
-HTTP server if the BAM file name starts with `ftp://' or `http://'.
-Samtools checks the current working directory for the index file and
-will download the index upon absence. Samtools does not retrieve the
-entire alignment file unless it is asked to do so.
+Samtools也能够打开一个远程FTP或HTTP服务器上的BAM（SAM不行）文件，但是这个BAM文件名要以 `ftp://' 或 `http://' 开头。Samtools会在当前工作目录下检查相应的索引文件，如果不存在的话，它会把它下载下来。Samtools不会获取整个比对文件，除非你要求它这么做。
 </p><p>
-</p><h1>COMMANDS AND OPTIONS</h1>
+</p><h1>COMMANDS AND OPTIONS - 命令和参数</h1>
 <p>
 </p><dl><dt><b>view</b></dt><dd><p>
 samtools view
