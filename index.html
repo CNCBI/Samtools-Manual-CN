@@ -207,10 +207,7 @@ decimal point sets the fraction of templates/pairs to subsample [no subsampling]
 </p></dd><dt><b>-@ </b><em>INT</em></dt><dd><p>
 进行BAM压缩操作时，除了主线程之外，额外分配的线程数 [0]。
 </p></dd><dt><b>-S</b></dt><dd><p>
-Ignored for compatibility with previous samtools versions.
-Previously this option was required if input was in SAM format, but now the
-correct format is automatically detected by examining the first few characters
-of input.
+这个参数会被忽略，它只是为了和旧版本的samtools相兼容。之前，如果输入文件是SAM格式的话，必须添加这个参数，但是现在，软件会侦测输入的前几个字符，自动确定正确的格式。
 </p></dd></dl>
 <p>
 </p></dd><dt><b>tview</b></dt><dd><p>
@@ -224,10 +221,7 @@ samtools tview
 &lt;in.sorted.bam&gt;
 [ref.fasta]
 </p><p>
-Text alignment viewer (based on the ncurses library). In the viewer,
-press `?' for help and press `g' to check the alignment start from a
-region in the format like `chr10:10,000,000' or `=10,000,000' when
-viewing the same reference sequence.
+文字版的reads和参考序列的比对情况的查看器（基于 ncurses library ）。在这个查看器中，按下 `?' 来寻求帮助，按下 `g' 可以从某个区域开始查看比对，这个区域用如下格式来表示：`chr10:10,000,000'，或者，当继续查看相同的参考序列时，可以使用 `=10,000,000'。
 </p><p>
 <b>Options:</b>
 </p><dl><dt><b>-d</b><em> display</em></dt><dd><p>
