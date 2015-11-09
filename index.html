@@ -251,10 +251,9 @@ samtools mpileup
 [<em>in2.bam</em>
 [<em>...</em>]]
 </p><p>
-Generate VCF, BCF or pileup for one or multiple BAM files. Alignment records
-are grouped by sample (SM) identifiers in @RG header lines. If sample
-identifiers are absent, each input file is regarded as one sample.
+对一个或多个BAM文件，生成VCF、BCF或者pileup（堆积文件）。比对记录会按照头文件中@RG行里面样本标识符（SM）来分组。如果样本标识符不存在，那么每一个输入文件都被视作一个独立的样本。
 </p><p>
+在（没有使用 <b>-u</b> 或 <b> -g</b> 参数的）pileup格式中，每一行代表基因组上的一个位置，它由染色体名字，1-based坐标（该染色体的第一个碱基标为1），参考序列上的碱基，覆盖这个位点的reads数目，read上的碱基，碱基的质量和比对的质量构成。下列信息：匹配、不匹配、插入删除、正反向链、比对质量、是否是某read的起始或终止碱基，全部都编码在read上的碱基这里面了。
 In the pileup format (without
 <b>-u</b> or<b> -g</b>),
 each
