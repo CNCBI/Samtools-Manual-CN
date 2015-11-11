@@ -261,7 +261,7 @@ samtools mpileup
 </p></dd><dt><b>-A, --count-orphans</b></dt><dd><p>
 在识别变异时，不要跳过反常的read。
 </p></dd><dt><b>-b, --bam-list</b><em> FILE</em></dt><dd><p>
-List of input BAM files, one file per line [null]
+输入的BAM文件的地址的列表，一个文件一行 [null]。
 </p></dd><dt><b>-B, --no-BAQ</b></dt><dd><p>
 Disable probabilistic realignment for the computation of base alignment
 quality (BAQ). BAQ is the Phred-scaled probability of a read base being
@@ -278,7 +278,7 @@ At a position, read maximally
 <em>INT</em>
 reads per input BAM. [250]
 </p></dd><dt><b>-E, --redo-BAQ</b></dt><dd><p>
-Recalculate BAQ on the fly, ignore existing BQ tags
+在运行时重新计算BAQ，忽略存在的BQ标签。
 </p></dd><dt><b>-f, --fasta-ref</b><em> FILE</em></dt><dd><p>
 The
 <b>faidx</b>-indexed
@@ -302,7 +302,7 @@ two requests.
 <em>STR</em>
 [all sites]
 </p></dd><dt><b>-R, --ignore-RG</b></dt><dd><p>
-Ignore RG tags. Treat all reads in one BAM as one sample.
+忽略RG标签，把一个BAM文件中所有的reads都视为一个样本。
 </p></dd><dt><b>--rf, --incl-flags</b><em> STR|INT</em></dt><dd><p>
 Required flags: skip reads with mask bits unset [null]
 </p></dd><dt><b>--ff, --excl-flags</b><em> STR|INT</em></dt><dd><p>
