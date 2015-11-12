@@ -15,7 +15,7 @@
       <h2 class="project-tagline">Samtools&#39; manual in Chinese - Samtools中文使用手册</h2>
       <a href="https://github.com/CNCBI/Samtools-Manual-CN" class="btn">View on GitHub</a>
     </section>
-
+DOCTYPE
     <section class="main-content">
 
 <div class="container manpage">
@@ -261,7 +261,7 @@ samtools mpileup
 </p></dd><dt><b>-A, --count-orphans</b></dt><dd><p>
 在识别变异时，不要跳过反常的read。
 </p></dd><dt><b>-b, --bam-list</b><em> FILE</em></dt><dd><p>
-输入的BAM文件的地址的列表，一个文件一行 [null]。
+输入的BAM文件的地址的列表，一个文件一行。 [null]
 </p></dd><dt><b>-B, --no-BAQ</b></dt><dd><p>
 Disable probabilistic realignment for the computation of base alignment
 quality (BAQ). BAQ is the Phred-scaled probability of a read base being
@@ -274,17 +274,11 @@ being generated from the mapped position, the new mapping quality is
 about sqrt((INT-q)/INT)*INT. A zero value disables this
 functionality; if enabled, the recommended value for BWA is 50. [0]
 </p></dd><dt><b>-d, --max-depth</b><em> INT</em></dt><dd><p>
-At a position, read maximally
-<em>INT</em>
-reads per input BAM. [250]
+在一个位置上，对每个BAM输入文件，最多读取 <em>INT</em> 个reads。 [250]
 </p></dd><dt><b>-E, --redo-BAQ</b></dt><dd><p>
 在运行时重新计算BAQ，忽略存在的BQ标签。
 </p></dd><dt><b>-f, --fasta-ref</b><em> FILE</em></dt><dd><p>
-The
-<b>faidx</b>-indexed
-reference file in the FASTA format. The file can be optionally compressed by
-<b>bgzip</b>.
-[null]
+用<b>faidx</b>建立了索引的FASTA格式的参考序列文件，这个文件也可以是被<b>bgzip</b>压缩过的。 [null]
 </p></dd><dt><b>-G, --exclude-RG</b><em> FILE</em></dt><dd><p>
 Exclude reads from readgroups listed in FILE (one @RG-ID per line)
 </p></dd><dt><b>-l, --positions</b><em> FILE</em></dt><dd><p>
