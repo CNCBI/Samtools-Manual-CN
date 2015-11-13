@@ -280,21 +280,15 @@ functionality; if enabled, the recommended value for BWA is 50. [0]
 </p></dd><dt><b>-f, --fasta-ref</b><em> FILE</em></dt><dd><p>
 用<b>faidx</b>建立了索引的FASTA格式的参考序列文件，这个文件也可以是被<b>bgzip</b>压缩过的。 [null]
 </p></dd><dt><b>-G, --exclude-RG</b><em> FILE</em></dt><dd><p>
-Exclude reads from readgroups listed in FILE (one @RG-ID per line)
+排除列在文件FILE里面的readgroups里面的reads。（每一个@RG-ID占一行）
 </p></dd><dt><b>-l, --positions</b><em> FILE</em></dt><dd><p>
-BED or position list file containing a list of regions or sites where
-pileup or BCF should be generated. If BED, positions are 0-based
-half-open [null]
+BED或者是列了位置坐标的文件，这个文件含有一列区间或位点，这些地方是生产pileup或BCF的位置。如果是BED文件，坐标系统是0-based half-open（第一个碱基是0，区间是半开的）的。[null]
 </p></dd><dt><b>-q, -min-MQ</b><em> INT</em></dt><dd><p>
-Minimum mapping quality for an alignment to be used [0]
+最小的比对质量，某个比对的质量超过该值时才会被使用。[0]
 </p></dd><dt><b>-Q, --min-BQ</b><em> INT</em></dt><dd><p>
-Minimum base quality for a base to be considered [13]
+最小的碱基质量，某个碱基的质量超过该值时才会被使用。[13]
 </p></dd><dt><b>-r, --region</b><em> STR</em></dt><dd><p>
-Only generate pileup in region. Requires the BAM files to be indexed.
-If used in conjunction with -l then considers the intersection of the
-two requests.
-<em>STR</em>
-[all sites]
+只产生这个区域的pileup。需要建立了索引的BAM文件。如果和 -l 同时使用的话，会考虑两个要求的交集。<em>STR</em>[all sites]
 </p></dd><dt><b>-R, --ignore-RG</b></dt><dd><p>
 忽略RG标签，把一个BAM文件中所有的reads都视为一个样本。
 </p></dd><dt><b>--rf, --incl-flags</b><em> STR|INT</em></dt><dd><p>
@@ -303,13 +297,11 @@ Required flags: skip reads with mask bits unset [null]
 Filter flags: skip reads with mask bits set
 [UNMAP,SECONDARY,QCFAIL,DUP]
 </p></dd><dt><b>-x, --ignore-overlaps</b></dt><dd><p>
-Disable read-pair overlap detection.
+取消read-pair（双端测序的两个reads）的重叠的检查。
 </p></dd></dl><p>
 <b>Output Options:</b>
 </p><dl><dt><b>-o, --output </b><em>FILE</em></dt><dd><p>
-Write pileup or VCF/BCF output to
-<em>FILE</em>,
-rather than the default of standard output.
+把pileup或者VCF/BCF输出到<em>FILE</em>，而不是默认的标准输出里面。
 </p><p>
 (The same short option is used for both
 <b>--open-prob</b>
