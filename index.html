@@ -292,77 +292,53 @@ BED或者是列了位置坐标的文件，这个文件含有一列区间或位�
 </p></dd><dt><b>-R, --ignore-RG</b></dt><dd><p>
 忽略RG标签，把一个BAM文件中所有的reads都视为一个样本。
 </p></dd><dt><b>--rf, --incl-flags</b><em> STR|INT</em></dt><dd><p>
-Required flags: skip reads with mask bits unset [null]
+需要的flag的标签：不在这里的mask bits（flag的值）的reads会被忽略 [null]
 </p></dd><dt><b>--ff, --excl-flags</b><em> STR|INT</em></dt><dd><p>
-Filter flags: skip reads with mask bits set
-[UNMAP,SECONDARY,QCFAIL,DUP]
+过滤flags：忽略有这些mask bits标记的reads [UNMAP,SECONDARY,QCFAIL,DUP]
 </p></dd><dt><b>-x, --ignore-overlaps</b></dt><dd><p>
 取消read-pair（双端测序的两个reads）的重叠的检查。
 </p></dd></dl><p>
-<b>Output Options:</b>
+<b>Output Options - 输出参数:</b>
 </p><dl><dt><b>-o, --output </b><em>FILE</em></dt><dd><p>
 把pileup或者VCF/BCF输出到<em>FILE</em>，而不是默认的标准输出里面。
 </p><p>
-(The same short option is used for both
-<b>--open-prob</b>
-and
-<b>--output</b>.
-If
-<b>-o</b>'s
-argument contains any non-digit characters other than a leading + or - sign,
-it is interpreted as
-<b>--output</b>.
-Usually the filename extension will take care of this, but to write to an
-entirely numeric filename use
-<b>-o ./123</b>
-or
-<b>--output 123</b>.)
+（这个短参数同时被 <b>--open-prob</b> 和 <b>--output</b> 使用。如果<b>-o</b>的参数含有任何非数字的字符，而不是由 + 或 - 符号开头，它会被视作是<b>--output</b>。通常文件的扩展名会考虑到这一点，但是如果要写入到一个完全由数字组成的文件名，使用 <b>-o ./123</b> 或 <b>--output 123</b> 。）
 </p></dd><dt><b>-g, --BCF</b></dt><dd><p>
-Compute genotype likelihoods and output them in the binary call format (BCF).
-As of v1.0, this is BCF2 which is incompatible with the BCF1 format produced
-by previous (0.1.x) versions of samtools.
+计算基因型的概率，并输出到binary call format（BCF，二进制识别格式）。在v1.0版本的samtools中，它是BCF2，和BCF1格式是不兼容的，而以前的版本（0.1.x）输出的是BCF1。
 </p></dd><dt><b>-v, --VCF</b></dt><dd><p>
-Compute genotype likelihoods and output them in the variant call format (VCF).
-Output is bgzip-compressed VCF unless
-<b>-u</b>
-option is set.
+计算基因型的概率，并输出到variant call format（VCF，变异识别格式）。输出是bgzip压缩后的VCF，除非设定了<b>-u</b>参数。
 </p></dd></dl><p>
-<b>Output Options for mpileup format (without -g or -v):</b>
+<b>Output Options for mpileup format (without -g or -v) - mpileup格式的输出参数（没有 -g 或 -v）:</b>
 </p><dl><dt><b>-O, --output-BP</b></dt><dd><p>
-Output base positions on reads.
+输出reads里面碱基的位置。
 </p></dd><dt><b>-s, --output-MQ</b></dt><dd><p>
-Output mapping quality.
+输出mapping的质量。
 </p></dd></dl><p>
-<b>Output Options for VCF/BCF format (with -g or -v):</b>
+<b>Output Options for VCF/BCF format (with -g or -v) - VCF/BCF格式的输出参数（有 -g 或 -v）:</b>
 </p><dl><dt><b>-D</b></dt><dd><p>
-Output per-sample read depth [DEPRECATED - use
+输出每个样本的read depth（深度）[DEPRECATED - use
 <b>-t DP</b>
-instead]
+instead]（不再宜用，使用<b>-t DP</b>来替代它）
 </p></dd><dt><b>-S</b></dt><dd><p>
-Output per-sample Phred-scaled strand bias P-value [DEPRECATED - use
-<b>-t SP</b>
-instead]
+输出每个样本的Phred标准的的链的bias（偏差）的P-value（不再宜用，使用<b>-t SP</b>来替代它）
 </p></dd><dt><b>-t, --output-tags</b><em> LIST</em></dt><dd><p>
-Comma-separated list of FORMAT and INFO tags to output (case-insensitive):
+输出逗号分隔的 FORMAT 和 INFO 标签的列表（大小写不敏感）：
 <b>DP</b>
-(高质量碱基的数目，FORMAT)，
+（高质量碱基的数目，FORMAT），
 <b>DV</b>
-(Number of high-quality non-reference bases, FORMAT),
+（高质量的非参考序列的碱基数，FORMAT），
 <b>DPR</b>
-(Number of high-quality bases for each observed allele, FORMAT),
+（支持每个观察到的allele（等位基因）的高质量的碱基数，FORMAT），
 <b>INFO/DPR</b>
-(Number of high-quality bases for each observed allele, INFO),
+（支持每个观察到的allele（等位基因）的高质量的碱基数，INFO），
 <b>DP4</b>
-(Number of high-quality ref-forward, ref-reverse, alt-forward and alt-reverse bases, FORMAT),
+（高质量的 ref-forward, ref-reverse, alt-forward and alt-reverse （正向-参考序列，反向-参考序列，正向-突变序列，反向-突变序列）的碱基数目，FORMAT），
 <b>SP</b>
-(Phred-scaled strand bias P-value, FORMAT)
-[null]
+（Phred标准的的链的bias（偏差）的P-value，FORMAT） [null]
 </p></dd><dt><b>-u, --uncompressed</b></dt><dd><p>
-Generate uncompressed VCF/BCF output, which is preferred for piping.
+输出未被压缩的VCF/BCF，在使用unix管道（pipe）时推荐这个参数。
 </p></dd><dt><b>-V</b></dt><dd><p>
-Output per-sample number of non-reference reads [DEPRECATED - use
-<b>-t DV</b>
-instead]
+输出每个样本的非参考序列的reads数 （不再宜用，使用<b>-t DV</b>来替代它）
 </p></dd></dl><p>
 <b>Options for SNP/INDEL Genotype Likelihood Computation (for -g or -v):</b>
 </p><dl><dt><b>-e, --ext-prob</b><em> INT</em></dt><dd><p>
