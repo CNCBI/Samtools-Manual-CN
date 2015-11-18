@@ -341,12 +341,11 @@ instead]（不再宜用，使用<b>-t DP</b>来替代它）
 输出每个样本的非参考序列的reads数 （不再宜用，使用<b>-t DV</b>来替代它）
 </p></dd></dl><p>
 <b>Options for SNP/INDEL Genotype Likelihood Computation (for -g or -v):</b>
+<b>对SNP/INDEL基因型的概率计算的参数 (for -g or -v):</b>
 </p><dl><dt><b>-e, --ext-prob</b><em> INT</em></dt><dd><p>
-Phred-scaled gap extension sequencing error probability. Reducing
-<em>INT</em>
-leads to longer indels. [20]
+Phred标准的gap延伸的测序错误概率。降低<em>INT</em>值会产生更长的indels。 [20]
 </p></dd><dt><b>-F, --gap-frac</b><em> FLOAT</em></dt><dd><p>
-Minimum fraction of gapped reads [0.002]
+最小的有gap的reads的比例。 [0.002]
 </p></dd><dt><b>-h, --tandem-qual</b><em> INT</em></dt><dd><p>
 Coefficient for modeling homopolymer errors. Given an
 <em>l</em>-long
