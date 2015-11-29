@@ -348,16 +348,11 @@ Phred标准的gap延伸的测序错误概率。降低<em>INT</em>值会产生更
 </p></dd><dt><b>-F, --gap-frac</b><em> FLOAT</em></dt><dd><p>
 最小的有gap的reads的比例。 [0.002]
 </p></dd><dt><b>-h, --tandem-qual</b><em> INT</em></dt><dd><p>
-Coefficient for modeling homopolymer errors. Given an
-<em>l</em>-long
-homopolymer
-run, the sequencing error of an indel of size
-<em>s</em>
-is modeled as
-<em>INT</em>*<em>s</em>/<em>l</em>.
+对同聚物错误建模的系数。考虑一个长度为 <em>l</em> 的同聚物而言，大小为 <em>s</em> 的indel的测序错误是如下建模的：
+<em>INT</em> * <em>s</em> / <em>l</em>.
 [100]
 </p></dd><dt><b>-I, --skip-indels</b></dt><dd><p>
-Do not perform INDEL calling
+不进行INDEL的识别。
 </p></dd><dt><b>-L, --max-idepth</b><em> INT</em></dt><dd><p>
 Skip INDEL calling if the average per-sample depth is above
 <em>INT</em>.
