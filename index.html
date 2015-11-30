@@ -354,13 +354,9 @@ Phred标准的gap延伸的测序错误概率。降低<em>INT</em>值会产生更
 </p></dd><dt><b>-I, --skip-indels</b></dt><dd><p>
 不进行INDEL的识别。
 </p></dd><dt><b>-L, --max-idepth</b><em> INT</em></dt><dd><p>
-Skip INDEL calling if the average per-sample depth is above
-<em>INT</em>.
-[250]
+当每个样本的平均深度大于 <em>INT</em> 时，略过INDEL的识别。 [250]
 </p></dd><dt><b>-m, --min-ireads</b><em> INT</em></dt><dd><p>
-Minimum number gapped reads for indel candidates
-<em>INT</em>.
-[1]
+识别候选indel时，最小的存在gap的reads数目 <em>INT</em>。 [1]
 </p></dd><dt><b>-o, --open-prob</b><em> INT</em></dt><dd><p>
 Phred-scaled gap open sequencing error probability. Reducing
 <em>INT</em>
