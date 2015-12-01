@@ -358,19 +358,9 @@ Phred标准的gap延伸的测序错误概率。降低<em>INT</em>值会产生更
 </p></dd><dt><b>-m, --min-ireads</b><em> INT</em></dt><dd><p>
 识别候选indel时，最小的存在gap的reads数目 <em>INT</em>。 [1]
 </p></dd><dt><b>-o, --open-prob</b><em> INT</em></dt><dd><p>
-Phred-scaled gap open sequencing error probability. Reducing
-<em>INT</em>
-leads to more indel calls. [40]
+由测序错误引入的gap的Phred-标准的概率。减少 <em>INT</em> 值会识别更多的indel。 [40]
 </p><p>
-(The same short option is used for both
-<b>--open-prob</b>
-and
-<b>--output</b>.
-When
-<b>-o</b>'s
-argument contains only an optional + or - sign followed by the digits 0 to 9,
-it is interpreted as
-<b>--open-prob</b>.)
+（这个短参数同时被 <b>--open-prob</b> 和 <b>--output</b> 使用。当 <b>-o</b> 的参数是可选的 + 或 - 号，跟随着数字0-9的话，它会被视作 <b>--open-prob</b>。）
 </p></dd><dt><b>-p, --per-sample-mF</b></dt><dd><p>
 Apply
 <b>-m</b>
