@@ -362,6 +362,7 @@ Phred标准的gap延伸的测序错误概率。降低<em>INT</em>值会产生更
 </p><p>
 （这个短参数同时被 <b>--open-prob</b> 和 <b>--output</b> 使用。当 <b>-o</b> 的参数是可选的 + 或 - 号，跟随着数字0-9的话，它会被视作 <b>--open-prob</b>。）
 </p></dd><dt><b>-p, --per-sample-mF</b></dt><dd><p>
+
 Apply
 <b>-m</b>
 and
@@ -369,11 +370,7 @@ and
 thresholds per sample to increase sensitivity of calling.
 By default both options are applied to reads pooled from all samples.
 </p></dd><dt><b>-P, --platforms</b><em> STR</em></dt><dd><p>
-Comma-delimited list of platforms (determined by
-<b>@RG-PL</b>)
-from which indel candidates are obtained. It is recommended to collect
-indel candidates from sequencing technologies that have low indel error
-rate such as ILLUMINA. [all]
+逗号分隔的一列仪器平台（由<b>@RG-PL</b>决定的），候选indel会从这些reads中获取。我们建议从低indel错误率的测序平台，比如ILLUMINA，中去收集候选indel。 [all]
 </p></dd></dl>
 <p>
 </p></dd><dt><b>reheader</b></dt><dd><p>
