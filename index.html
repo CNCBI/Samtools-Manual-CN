@@ -376,12 +376,7 @@ By default both options are applied to reads pooled from all samples.
 </p></dd><dt><b>reheader</b></dt><dd><p>
 samtools reheader &lt;in.header.sam&gt; &lt;in.bam&gt;
 </p><p>
-Replace the header in
-<em>in.bam</em>
-with the header in
-<em>in.header.sam.</em>
-This command is much faster than replacing the header with a
-BAM→SAM→BAM conversion.
+用 <em>in.header.sam</em> 里面的头文件替换 <em>in.bam</em> 里的。这个命令比通过BAM→SAM→BAM转换来替换头文件要快很多。
 </p><p>
 </p></dd><dt><b>cat</b></dt><dd><p>
 samtools cat [-h header.sam] [-o out.bam] &lt;in1.bam&gt; &lt;in2.bam&gt; [ ... ]
