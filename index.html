@@ -381,11 +381,7 @@ samtools reheader &lt;in.header.sam&gt; &lt;in.bam&gt;
 </p></dd><dt><b>cat</b></dt><dd><p>
 samtools cat [-h header.sam] [-o out.bam] &lt;in1.bam&gt; &lt;in2.bam&gt; [ ... ]
 </p><p>
-Concatenate BAMs. The sequence dictionary of each input BAM must be identical,
-although this command does not check this. This command uses a similar trick
-to
-<b>reheader</b>
-which enables fast BAM concatenation.
+串连 BAM 文件。每一个输入的BAM里面的 sequence dictionary 必须相同，虽然这个命令并不检查这一点。这个命令使用了和 <b>reheader</b> 类似的小技巧来实现了快速的BAM串连。
 </p><p>
 </p></dd><dt><b>sort</b></dt><dd><p>
 samtools sort
