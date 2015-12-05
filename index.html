@@ -398,12 +398,8 @@ samtools sort
 [<b>-@</b>
 <em>threads</em>] [<em>in.bam</em>]
 </p><p>
-Sort alignments by leftmost coordinates, or by read name when
-<b>-n</b>
-is used.
-An appropriate
-<b>@HD-SO</b>
-sort order header tag will be added or an existing one updated if necessary.
+对序列进行排序。默认通过最左边的坐标排序；当使用 <b>-n</b> 时，通过read的名字排序。
+一个相应的 <b>@HD-SO</b> 排序顺序标签会被添加在头文件里面，或者如果必要的话会更新已经存在的标签。
 </p><p>
 The sorted output is written to standard output by default, or to the
 specified file
