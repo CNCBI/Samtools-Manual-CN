@@ -401,6 +401,7 @@ samtools sort
 对序列进行排序。默认通过最左边的坐标排序；当使用 <b>-n</b> 时，通过read的名字排序。
 一个相应的 <b>@HD-SO</b> 排序顺序标签会被添加在头文件里面，或者如果必要的话会更新已经存在的标签。
 </p><p>
+排好序后默认输出到标准输出，如果使用了 <b>-o</b> 的话，就输出到指定的文件里面 (<em>out.bam</em>) 。
 The sorted output is written to standard output by default, or to the
 specified file
 (<em>out.bam</em>)
