@@ -405,15 +405,9 @@ samtools sort
 </p><p>
 <b>Options:</b>
 </p><dl><dt><b>-l </b><em>INT</em></dt><dd><p>
-Set the desired compression level for the final output file, ranging from 0
-(uncompressed) or 1 (fastest but minimal compression) to 9 (best compression
-but slowest to write), similarly to
-<b>gzip</b>(1)'s
-compression level setting.
+为最终的输出文件设置想要的压缩程度，从0（不压缩）或1（最快但是压缩得最少）到9（最大程度压缩但是写得最慢），和 <b>gzip</b>(1) 的压缩程度设置相似。
 </p><p>
-If
-<b>-l</b>
-is not used, the default compression level will apply.
+如果 <b>-l</b> 没有被使用，会使用默认的压缩程度。
 </p></dd><dt><b>-m </b><em>INT</em></dt><dd><p>
 Approximately the maximum required memory per thread, specified either in bytes
 or with a
