@@ -419,9 +419,7 @@ samtools sort
 </p><p>
 默认地，samtools 会基于 <b>-o</b> 文件的扩展名尝试选择一个格式；如果是到标准输出或者格式不能被推测出， <b>-O</b> 必须要被指定。
 </p></dd><dt><b>-T </b><em>PREFIX</em></dt><dd><p>
-Write temporary files to
-<em>PREFIX</em><b>.</b><em>nnnn</em><b>.bam.</b>
-This option is required.
+把临时文件写到 <em>PREFIX</em><b>.</b><em>nnnn</em><b>.bam.</b> 里面。这个参数是必须的。
 </p></dd><dt><b>-@ </b><em>INT</em></dt><dd><p>
 Set number of sorting and compression threads.
 By default, operation is single-threaded.
