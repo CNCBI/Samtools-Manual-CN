@@ -446,12 +446,7 @@ samtools merge [-nur1f] [-h inh.sam] [-R reg] [-b &lt;list&gt;] &lt;out.bam&gt; 
 </p><p>
 合并多个排好序的比对文件，产生一个排好序的输出文件，这个文件含有所有的输入记录，并且保留了他们原来的顺序。
 </p><p>
-If
-<b>-h</b>
-is specified the @SQ headers of input files will be merged into the specified header, otherwise they will be merged
-into a composite header created from the input headers.  If in the process of merging @SQ lines for coordinate sorted
-input files, a conflict arises as to the order (for example input1.bam has @SQ for a,b,c and input2.bam has b,a,c)
-then the resulting output file will need to be re-sorted back into coordinate order.
+如果 <b>-h</b> 被指定了的话，输入文件里的@SQ头文件将会被合并到指定的头中，否则的话，他们会被合并成由输入的头文件组成的复合的头中。如果在合并@SQ行的过程中，这些行体现了输入文件排好序的坐标，而在序列当中又出现了一个矛盾（比如说，input1.bam 有一个@SQ是 a,b,c 而input2.bam是 b,a,c），那么输出的结果文件需要被重新按照坐标序列排序。
 </p><p>
 Unless the
 <b>-c</b>
