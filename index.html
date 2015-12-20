@@ -448,13 +448,7 @@ samtools merge [-nur1f] [-h inh.sam] [-R reg] [-b &lt;list&gt;] &lt;out.bam&gt; 
 </p><p>
 如果 <b>-h</b> 被指定了的话，输入文件里的@SQ头文件将会被合并到指定的头中，否则的话，他们会被合并成由输入的头文件组成的复合的头中。如果在合并@SQ行的过程中，这些行体现了输入文件排好序的坐标，而在序列当中又出现了一个矛盾（比如说，input1.bam 有一个@SQ是 a,b,c 而input2.bam是 b,a,c），那么输出的结果文件需要被重新按照坐标序列排序。
 </p><p>
-Unless the
-<b>-c</b>
-or
-<b>-p</b>
-flags are specified then when merging @RG and @PG records into the output header then any IDs found to be duplicates
-of existing IDs in the output header will have a suffix appended to them to diffientiate them from similar header
-records from other files and the read records will be updated to reflect this.
+除非指定了 <b>-c</b> 或 <b>-p</b> 标志，在合并 @RG 和 @PG 记录到输出的头文件的时候，任何和现有 IDs 重复的 IDs 将会连接一个后缀把它们和其他头文件中相似的记录区分开来，并且read记录也会被更新来反映这一点。
 </p><p>
 <b>OPTIONS:</b>
 </p><dl><dt><b>-1</b></dt><dd><p>
