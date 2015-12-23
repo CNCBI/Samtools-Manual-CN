@@ -456,17 +456,9 @@ samtools merge [-nur1f] [-h inh.sam] [-R reg] [-b &lt;list&gt;] &lt;out.bam&gt; 
 </p></dd><dt><b>-b</b><em> FILE</em></dt><dd><p>
 输入 BAM 文件的列表，每行一个文件。
 </p></dd><dt><b>-f</b></dt><dd><p>
-Force to overwrite the output file if present.
+如果输出文件存在的话，强制覆盖它。
 </p></dd><dt><b>-h</b><em> FILE</em></dt><dd><p>
-Use the lines of
-<em>FILE</em>
-as `@' headers to be copied to
-<em>out.bam</em>,
-replacing any header lines that would otherwise be copied from
-<em>in1.bam</em>.
-(<em>FILE</em>
-is actually in SAM format, though any alignment records it may contain
-are ignored.)
+把 <em>FILE</em> 的`@'头复制到 <em>out.bam</em> 中，如果不指定该参数的话，会复制 <em>out.bam</em> 的头。（ <em>FILE</em> 实际是 SAM 格式的，但是它里面可能存在的任何比对记录都会被忽略。）
 </p></dd><dt><b>-n</b></dt><dd><p>
 The input alignments are sorted by read names rather than by chromosomal
 coordinates
