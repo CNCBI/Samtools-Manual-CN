@@ -460,8 +460,7 @@ samtools merge [-nur1f] [-h inh.sam] [-R reg] [-b &lt;list&gt;] &lt;out.bam&gt; 
 </p></dd><dt><b>-h</b><em> FILE</em></dt><dd><p>
 把 <em>FILE</em> 的`@'头复制到 <em>out.bam</em> 中，如果不指定该参数的话，会复制 <em>out.bam</em> 的头。（ <em>FILE</em> 实际是 SAM 格式的，但是它里面可能存在的任何比对记录都会被忽略。）
 </p></dd><dt><b>-n</b></dt><dd><p>
-The input alignments are sorted by read names rather than by chromosomal
-coordinates
+使输入的比对序列按照read的名字来排序，而不是染色体坐标。
 </p></dd><dt><b>-R</b><em> STR</em></dt><dd><p>
 Merge files in the specified region indicated by
 <em>STR</em>
