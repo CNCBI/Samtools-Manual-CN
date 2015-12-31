@@ -482,18 +482,10 @@ samtools index
 </p><p>
 为按坐标排好序的 BAM 或 CRAM 文件，用以快速随机访问。下列情况是需要这个索引的：用 <em>region</em> 参数限制了 <b>samtools view</b> ， 和类似的针对特定感兴趣区域的命令。
 </p><p>
-For a CRAM file
-<em>aln.cram</em>,
-index file
-<em>aln.cram</em><b>.crai</b>
-will be created.
-For a BAM file
-<em>aln.bam</em>,
-either
-<em>aln.bam</em><b>.bai</b>
-or
-<em>aln.bam</em><b>.csi</b>
-will be created, depending on the index format selected.
+对于一个 CRAM 文件， <em>aln.cram</em> ，名为 <em>aln.cram</em><b>.crai</b> 的索引文件将会被创建。
+对于一个 BAM 文件， <em>aln.bam</em> ， 名为 <em>aln.bam</em><b>.bai</b>
+或
+<em>aln.bam</em><b>.csi</b> 的索引文件中的一个将会被创建，这由选择的索引格式决定。
 </p><p>
 <b>Options:</b>
 </p><dl><dt><b>-b</b></dt><dd><p>
