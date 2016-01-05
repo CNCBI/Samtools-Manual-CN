@@ -504,16 +504,8 @@ samtools idxstats &lt;aln.bam&gt;
 </p></dd><dt><b>faidx</b></dt><dd><p>
 samtools faidx &lt;ref.fasta&gt; [region1 [...]]
 </p><p>
-Index reference sequence in the FASTA format or extract subsequence from
-indexed reference sequence. If no region is specified,
-<b>faidx</b>
-will index the file and create
-<em>&lt;ref.fasta&gt;.fai</em>
-on the disk. If regions are specified, the subsequences will be
-retrieved and printed to stdout in the FASTA format. The input file can
-be compressed in the
-<b>BGZF</b>
-format.
+对FASTA格式的参考序列建立索引，或者从已建立索引的参考序列中获取子序列。
+如果没有指定区间， <b>faidx</b> 会为这个文件在硬盘上创建索引文件 <em>&lt;ref.fasta&gt;.fai</em> 。如果指定了区间，相应的子序列会被获取并以FASTA格式打印到标准输出。输入文件可以是以 <b>BGZF</b> 格式的压缩文件。
 </p><p>
 </p></dd><dt><b>fixmate</b></dt><dd><p>
 samtools fixmate
