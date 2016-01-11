@@ -533,6 +533,7 @@ Write the final output as
 </p></dd><dt><b>rmdup</b></dt><dd><p>
 samtools rmdup [-sS] &lt;input.srt.bam&gt; &lt;out.bam&gt;
 </p><p>
+去除可能的由PCR造成的重复序列：如果多个 read pair 有相同的坐标，只保留比对质量最高的那一对。
 Remove potential PCR duplicates: if multiple read pairs have identical
 external coordinates, only retain the pair with highest mapping quality.
 In the paired-end mode, this command
