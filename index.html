@@ -533,14 +533,7 @@ Write the final output as
 </p></dd><dt><b>rmdup</b></dt><dd><p>
 samtools rmdup [-sS] &lt;input.srt.bam&gt; &lt;out.bam&gt;
 </p><p>
-去除可能的由PCR造成的重复序列：如果多个 read pair 有相同的坐标，只保留比对质量最高的那一对。
-Remove potential PCR duplicates: if multiple read pairs have identical
-external coordinates, only retain the pair with highest mapping quality.
-In the paired-end mode, this command
-<b>ONLY</b>
-works with FR orientation and requires ISIZE is correctly set. It does
-not work for unpaired reads (e.g. two ends mapped to different
-chromosomes or orphan reads).
+去除可能的由PCR造成的重复序列：如果多个 read pair 有相同的坐标，只保留比对质量最高的那一对。在双端模式下，这个命令<b>只</b>用于FR方向并且要求正确设置 ISIZE 。它不处理不配对的 reads （比如两端比对到不同的染色体上了或者孤reads（pair中只有一个read比对到基因组了））。
 </p><p>
 <b>OPTIONS:</b>
 </p><dl><dt><b>-s</b></dt><dd><p>
