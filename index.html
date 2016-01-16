@@ -545,10 +545,7 @@ samtools rmdup [-sS] &lt;input.srt.bam&gt; &lt;out.bam&gt;
 </p></dd><dt><b>calmd</b></dt><dd><p>
 samtools calmd [-EeubSr] [-C capQcoef] &lt;aln.bam&gt; &lt;ref.fasta&gt;
 </p><p>
-产生 MD 标签。
-Generate the MD tag. If the MD tag is already present, this command will
-give a warning if the MD tag generated is different from the existing
-tag. Output SAM by default.
+产生 MD 标签。如果 MD 标签已经存在，并且新产生的MD标签和已有的不一样的话，这个命令会发出一个警告。默认输出成 SAM 。
 </p><p>
 <b>OPTIONS:</b>
 </p><dl><dt><b>-A</b></dt><dd><p>
