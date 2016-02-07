@@ -608,11 +608,12 @@ samtools flags INT|STR[,...]
 </p><table>
 <tbody><tr><td>0x1</td><td>PAIRED</td><td>.. 双端（多段）测序技术
 </td></tr>
-<tr><td>0x2</td><td>PROPER_PAIR</td><td>.. 每短序列都被 aligner 合适的比对上了。
+<tr><td>0x2</td><td>PROPER_PAIR</td><td>.. 每短序列都被 aligner 合适的比对上了
 </td></tr>
 <tr><td>0x4</td><td>UNMAP</td><td>.. 片段未比对成功
 </td></tr>
-<tr><td>0x8</td><td>MUNMAP</td><td>.. next segment in the template unmapped</td></tr>
+<tr><td>0x8</td><td>MUNMAP</td><td>.. 模板中的下一个片段没有被比对上
+</td></tr>
 <tr><td>0x10</td><td>REVERSE</td><td>.. SEQ is reverse complemented</td></tr>
 <tr><td>0x20</td><td>MREVERSE</td><td>.. SEQ of the next segment in the template is reversed</td></tr>
 <tr><td>0x40</td><td>READ1</td><td>.. the first segment in the template</td></tr>
