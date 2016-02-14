@@ -631,11 +631,8 @@ samtools bam2fq [-nO] [-s &lt;outSE.fq&gt;] &lt;in.bam&gt;
 </p><p>
 <b>OPTIONS:</b>
 </p><dl><dt><b>-n</b></dt><dd><p>
-By default, either '/1' or '/2' is added to the end of read names
-where the corresponding BAM_READ1 or BAM_READ2 flag is set.
-Using
-<b>-n</b>
-causes read names to be left as they are.
+默认情况下，根据 BAM_READ1 或 BAM_READ2 的标志，‘/1’ 或者 ‘/2’ 会被相应的添加在read名字的末尾。
+使用 <b>-n</b> 会保留原有的read的名字。
 </p></dd><dt><b>-O</b></dt><dd><p>
 Use quality values from OQ tags in preference to standard quality string
 if available.
