@@ -634,8 +634,7 @@ samtools bam2fq [-nO] [-s &lt;outSE.fq&gt;] &lt;in.bam&gt;
 默认情况下，根据 BAM_READ1 或 BAM_READ2 的标志，‘/1’ 或者 ‘/2’ 会被相应的添加在read名字的末尾。
 使用 <b>-n</b> 会保留原有的read的名字。
 </p></dd><dt><b>-O</b></dt><dd><p>
-Use quality values from OQ tags in preference to standard quality string
-if available.
+如果可行的话，同标准质量字符串相比，优先选择使用 OQ 标签里的质量值.
 </p></dd><dt><b>-s FILE</b></dt><dd><p>
 Write singleton reads in FASTQ format to FILE instead of outputting them.
 </p></dd></dl>
