@@ -794,7 +794,7 @@ Collecting indel candidates from reads sequenced by an indel-prone
 technology may affect the performance of indel calling.
 </p><p>
 </p><p>
-Generate the consensus sequence for one diploid individual:
+为一个二倍体个体产生保守序列
 </p><pre>samtools mpileup -uf ref.fa aln.bam | bcftools call -c | vcfutils.pl vcf2fq &gt; cns.fq
 </pre>
 <p>
