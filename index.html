@@ -650,7 +650,7 @@ samtools bam2fq [-nO] [-s &lt;outSE.fq&gt;] &lt;in.bam&gt;
 </p></dd><dt><b>--version-only</b></dt><dd><p>
 以机器可读的格式显示 samtools 的完整版本号。
 </p></dd></dl><p>
-</p><h1>REFERENCE SEQUENCES</h1>
+</p><h1>REFERENCE SEQUENCES - 参考序列</h1>
 <p>
 对于读和写，CRAM格式都需要使用参考序列。
 </p><p>
@@ -676,7 +676,7 @@ Look for MD5 in each element of the REF_PATH environment variable.
 </p><p>
 Look for a local file listed in the UR: header tag.
 </p><p>
-</p><h1>ENVIRONMENT VARIABLES</h1>
+</p><h1>ENVIRONMENT VARIABLES - 环境变量</h1>
 <p>
 </p><dl><dt><b>REF_PATH</b></dt><dd><p>
 A colon separated (semi-colon on Windows) list of locations in which
@@ -715,11 +715,9 @@ To aid population of the REF_CACHE directory a script
 distribution. This takes a fasta file or a directory of fasta files
 and generates the MD5sum named files.
 </p></dd></dl><p>
-</p><h1>EXAMPLES</h1>
+</p><h1>EXAMPLES - 示例</h1>
 <p>
-Import SAM to BAM when
-<b>@SQ</b>
-lines are present in the header:
+在 <b>@SQ</b> 行存在于头文件中时，把 SAM 转化为 BAM 格式：
 </p><pre>samtools view -bS aln.sam &gt; aln.bam
 </pre>
 If
