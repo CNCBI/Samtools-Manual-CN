@@ -720,9 +720,9 @@ and generates the MD5sum named files.
 在 <b>@SQ</b> 行存在于头文件中时，把 SAM 转化为 BAM 格式：
 </p><pre>samtools view -bS aln.sam &gt; aln.bam
 </pre>
-If
+如果
 <b>@SQ</b>
-lines are absent:
+行不存在：
 <pre>samtools faidx ref.fa
 samtools view -bt ref.fa.fai aln.sam &gt; aln.bam
 </pre>
