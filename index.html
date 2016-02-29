@@ -733,9 +733,7 @@ samtools view -bt ref.fa.fai aln.sam &gt; aln.bam
 </p><pre>samtools view -C -T ref.fa aln.bam &gt; aln.cram
 </pre>
 <p>
-Attach the
-<b>RG</b>
-tag while merging sorted alignments:
+在合并排序后的比对序列的时候，添加 <b>RG</b> 标签：
 </p><pre>perl -e 'print "@RG\\tID:ga\\tSM:hs\\tLB:ga\\tPL:Illumina\\n@RG\\tID:454\\tSM:hs\\tLB:454\\tPL:454\\n"' &gt; rg.txt
 samtools merge -rh rg.txt merged.bam ga.bam 454.bam
 </pre>
