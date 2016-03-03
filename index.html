@@ -752,7 +752,7 @@ will be attached
 <em>RG:Z:454</em>.
 <p>
 </p><p>
-Call SNPs and short INDELs:
+识别 SNP 和短 INDEL （插入删除）：
 </p><pre>samtools mpileup -uf ref.fa aln.bam | bcftools call -mv &gt; var.raw.vcf
 bcftools filter -s LowQual -e '%QUAL&lt;20 || DP&gt;100' var.raw.vcf  &gt; var.flt.vcf
 </pre>
