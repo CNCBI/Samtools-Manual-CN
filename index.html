@@ -654,9 +654,9 @@ samtools bam2fq [-nO] [-s &lt;outSE.fq&gt;] &lt;in.bam&gt;
 <p>
 对于读和写，CRAM格式都需要使用参考序列。
 </p><p>
-When reading a CRAM the <b>@SQ</b> headers are interrogated to identify
-the reference sequence MD5sum (<b>M5:</b> tag) and the local reference
-sequence filename (<b>UR:</b> tag).  Note that <em>http://</em> and
+当读取一个 CRAM 文件的时候，会去查询 <b>@SQ</b> 头文件，以寻找参考序列的MD5sum
+（<b>M5:</b> 标签）和本地参考序列文件（<b>UR:</b> 标签）。
+ Note that <em>http://</em> and
 <em>ftp://</em> based URLs in the UR: field are not used, but local fasta
 filenames (with or without <em>file://</em>) can be used.
 </p><p>
