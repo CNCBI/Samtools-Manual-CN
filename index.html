@@ -658,8 +658,8 @@ samtools bam2fq [-nO] [-s &lt;outSE.fq&gt;] &lt;in.bam&gt;
 （<b>M5:</b> 标签）和本地参考序列文件（<b>UR:</b> 标签）。注意，基于<em>http://</em> 和
 <em>ftp://</em> 的网址是不可以在 UR: 字段使用的，但是本地的 fasta 文件名（不管有没有添加 <em>file://</em> ）是可以的。
 </p><p>
-To create a CRAM the <b>@SQ</b> headers will also be read to identify
-the reference sequences, but M5: and UR: tags may not be present. In
+当创建一个 CRAM 文件的时候，<b>@SQ</b> 头文件也会被读取然后识别参考序列，但是 M5: 和 UR: 标签可能不存在。
+In
 this case the <b>-T</b> and <b>-t</b> options of samtools view may be
 used to specify the fasta or fasta.fai filenames respectively
 (provided the .fasta.fai file is also backed up by a .fasta file).
