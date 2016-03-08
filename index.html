@@ -675,13 +675,10 @@ samtools bam2fq [-nO] [-s &lt;outSE.fq&gt;] &lt;in.bam&gt;
 </p><h1>ENVIRONMENT VARIABLES - 环境变量</h1>
 <p>
 </p><dl><dt><b>REF_PATH</b></dt><dd><p>
-A colon separated (semi-colon on Windows) list of locations in which
-to look for sequences identified by their MD5sums.  This can be either
-a list of directories or URLs. Note that if a URL is included then the
-colon in http:// and ftp:// and the optional port number will be
-treated as part of the URL and not a PATH field separator.
-For URLs, the text <b>%s</b> will be replaced by the MD5sum being
-read.
+由冒号分隔（在windows上是分号）的一列位置，用于去搜索由MD5sum指定的序列。它可以是
+一列目录或者网址。注意，如果是网址的话，http:// 和 ftp:// 以及可能出现的端口号中的冒
+号将不会被视为网址的一部分，而不会被当做 PATH 字段的分隔符。对于网址而言， <b>%s</b>
+会被读入的 MD5 替换。
 </p><p>
 If no REF_PATH has been specified it will default to
 <b>http://www.ebi.ac.uk/ena/cram/md5/%s</b> and if REF_CACHE is also unset,
