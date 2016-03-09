@@ -680,8 +680,8 @@ samtools bam2fq [-nO] [-s &lt;outSE.fq&gt;] &lt;in.bam&gt;
 号将不会被视为网址的一部分，而不会被当做 PATH 字段的分隔符。对于网址而言， <b>%s</b>
 会被读入的 MD5 替换。
 </p><p>
-If no REF_PATH has been specified it will default to
-<b>http://www.ebi.ac.uk/ena/cram/md5/%s</b> and if REF_CACHE is also unset,
+如果没有指定REF_PATH，那么将会使用默认值：<b>http://www.ebi.ac.uk/ena/cram/md5/%s</b>；
+if REF_CACHE is also unset,
 it will be set to <b>$XDG_CACHE_HOME/hts-ref/%2s/%2s/%s</b>.
 If <b>$XDG_CACHE_HOME</b> is unset, <b>$HOME/.cache</b> (or a local system
 temporary directory if no home directory is found) will be used similarly.
