@@ -681,8 +681,7 @@ samtools bam2fq [-nO] [-s &lt;outSE.fq&gt;] &lt;in.bam&gt;
 会被读入的 MD5 替换。
 </p><p>
 如果没有指定REF_PATH，那么将会使用默认值：<b>http://www.ebi.ac.uk/ena/cram/md5/%s</b>；
-if REF_CACHE is also unset,
-it will be set to <b>$XDG_CACHE_HOME/hts-ref/%2s/%2s/%s</b>.
+如果 REF_CACHE 也没有指定的话，那么将会被设置成 <b>$XDG_CACHE_HOME/hts-ref/%2s/%2s/%s</b> 。
 If <b>$XDG_CACHE_HOME</b> is unset, <b>$HOME/.cache</b> (or a local system
 temporary directory if no home directory is found) will be used similarly.
 </p><p>
