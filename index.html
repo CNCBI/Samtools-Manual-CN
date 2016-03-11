@@ -682,8 +682,8 @@ samtools bam2fq [-nO] [-s &lt;outSE.fq&gt;] &lt;in.bam&gt;
 </p><p>
 如果没有指定REF_PATH，那么将会使用默认值：<b>http://www.ebi.ac.uk/ena/cram/md5/%s</b>；
 如果 REF_CACHE 也没有指定的话，那么将会被设置成 <b>$XDG_CACHE_HOME/hts-ref/%2s/%2s/%s</b> 。
-If <b>$XDG_CACHE_HOME</b> is unset, <b>$HOME/.cache</b> (or a local system
-temporary directory if no home directory is found) will be used similarly.
+如果 <b>$XDG_CACHE_HOME</b> 没有设置的话， 会使用<b>$HOME/.cache</b> （如果没有找到 home 文件夹的话，
+会使用本地系统的临时文件夹）。
 </p><p>
 </p></dd><dt><b>REF_CACHE</b></dt><dd><p>
 This can be defined to a single directory housing a local cache of
