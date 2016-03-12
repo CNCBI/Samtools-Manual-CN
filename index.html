@@ -686,8 +686,9 @@ samtools bam2fq [-nO] [-s &lt;outSE.fq&gt;] &lt;in.bam&gt;
 会使用本地系统的临时文件夹）。
 </p><p>
 </p></dd><dt><b>REF_CACHE</b></dt><dd><p>
-This can be defined to a single directory housing a local cache of
-references.  Upon downloading a reference it will be stored in the
+这可被定义为一个单一的文件夹，用作本地的序列缓存区。
+
+Upon downloading a reference it will be stored in the
 location pointed to by REF_CACHE.  When reading a reference it will be
 looked for in this directory before searching REF_PATH.  To avoid many
 files being stored in the same directory, a pathname may be
