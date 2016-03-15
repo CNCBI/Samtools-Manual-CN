@@ -688,10 +688,8 @@ samtools bam2fq [-nO] [-s &lt;outSE.fq&gt;] &lt;in.bam&gt;
 </p></dd><dt><b>REF_CACHE</b></dt><dd><p>
 这可被定义为一个单一的文件夹，用作本地的序列缓存区。一旦下载了一个参考序列，它将会被储存在
 由REF_CACHE指定的位置。当读取一个参考序列时，会先在这个文件夹下搜索，然后再去 REF_PATH 搜索。
-  To avoid many
-files being stored in the same directory, a pathname may be
-constructed using %<em>num</em>s and %s notation, consuming <em>num</em>
-characters of the MD5sum.  For example
+为了避免同一个文件夹下存入了大量的文件，可能会使用 %<em>num</em>s and %s 标记去创建一个由
+MD5sum 中 <em>num</em> 字符构成的路径。 For example
 <b>/local/ref_cache/%2s/%2s/%s</b> will create 2 nested subdirectories
 with the filenames in the deepest directory being the last 28
 characters of the md5sum.
