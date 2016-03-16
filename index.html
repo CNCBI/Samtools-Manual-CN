@@ -692,8 +692,8 @@ samtools bam2fq [-nO] [-s &lt;outSE.fq&gt;] &lt;in.bam&gt;
 MD5sum 中 <em>num</em> 字符构成的路径。例如：<b>/local/ref_cache/%2s/%2s/%s</b> 这串字符
 将会创建一个嵌套两层的文件夹，最内层的文件夹里面将会存入 md5sum 最后的28个字符。
 </p><p>
-The REF_CACHE directory will be searched for before attempting to load
-via the REF_PATH search list.  If no REF_PATH is defined, both
+REF_CACHE 会被先搜索，然后才会尝试通过 REF_PATH 搜索列表加载。
+  If no REF_PATH is defined, both
 REF_PATH and REF_CACHE will be automatically set (see above), but if
 REF_PATH is defined and REF_CACHE not then no local cache is used.
 </p><p>
