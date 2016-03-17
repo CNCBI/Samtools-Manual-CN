@@ -693,9 +693,8 @@ MD5sum 中 <em>num</em> 字符构成的路径。例如：<b>/local/ref_cache/%2s
 将会创建一个嵌套两层的文件夹，最内层的文件夹里面将会存入 md5sum 最后的28个字符。
 </p><p>
 REF_CACHE 会被先搜索，然后才会尝试通过 REF_PATH 搜索列表加载。
-  If no REF_PATH is defined, both
-REF_PATH and REF_CACHE will be automatically set (see above), but if
-REF_PATH is defined and REF_CACHE not then no local cache is used.
+如果 REF_PATH 没有被设定，那么 REF_PATH 和 REF_CACHE 会被自动设置（参见上文）。
+但是如果 REF_PATH 被设定了而 REF_CACHE 没有被设定，那么就不会使用本地缓存。
 </p><p>
 To aid population of the REF_CACHE directory a script
 <b>misc/seq_ref_populate.pl</b> is provided in the Samtools
