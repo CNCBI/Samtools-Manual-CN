@@ -696,6 +696,8 @@ REF_CACHE 会被先搜索，然后才会尝试通过 REF_PATH 搜索列表加载
 如果 REF_PATH 没有被设定，那么 REF_PATH 和 REF_CACHE 会被自动设置（参见上文）。
 但是如果 REF_PATH 被设定了而 REF_CACHE 没有被设定，那么就不会使用本地缓存。
 </p><p>
+为了方便生成更多的 REF_CACHE 文件夹下的内容，我们在Samtools软件中提供了一个
+脚本，<b>misc/seq_ref_populate.pl</b>。
 To aid population of the REF_CACHE directory a script
 <b>misc/seq_ref_populate.pl</b> is provided in the Samtools
 distribution. This takes a fasta file or a directory of fasta files
