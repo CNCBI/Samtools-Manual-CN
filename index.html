@@ -737,20 +737,10 @@ bcftools filter -s LowQual -e '%QUAL&lt;20 || DP&gt;100' var.raw.vcf  &gt; var.f
 给 <b>mpileup</b> 添加 <b>-C50</b> 。应用这个参数通常对 <b>BWA-short</b> 有所
 帮助，对别的比对软件可能没有帮助。
 <p>
-Individuals are identified from the
-<b>SM</b>
-tags in the
-<b>@RG</b>
-header lines. Individuals can be pooled in one alignment file; one
-individual can also be separated into multiple files. The
-<b>-P</b>
-option specifies that indel candidates should be collected only from
-read groups with the
-<b>@RG-PL</b>
-tag set to
-<em>ILLUMINA</em>.
-Collecting indel candidates from reads sequenced by an indel-prone
-technology may affect the performance of indel calling.
+个体是由 <b>@RG</b> header行的 <b>SM</b> 标签来确定的。不同个体可以放到一个比对文件中；
+一个个体也可以被分到多个文件中。参数 <b>-P</b> 指明候选indel应该只从 <b>@RG-PL</b> 标签为
+ <em>ILLUMINA</em> 的read groups中收集。从容易出现indel的测序技术测出来的reads中收集候选
+ indel可能会影响indel识别的性能。
 </p><p>
 </p><p>
 为一个二倍体个体产生保守序列
