@@ -747,41 +747,27 @@ bcftools filter -s LowQual -e '%QUAL&lt;20 || DP&gt;100' var.raw.vcf  &gt; var.f
 </p><pre>samtools mpileup -uf ref.fa aln.bam | bcftools call -c | vcfutils.pl vcf2fq &gt; cns.fq
 </pre>
 <p>
-Phase one individual:
+为一个个体解单倍体型(Phase one individual)：
 </p><pre>samtools calmd -AEur aln.bam ref.fa | samtools phase -b prefix - &gt; phase.out
 </pre>
-The
-<b>calmd</b>
-command is used to reduce false heterozygotes around INDELs.
+命令 <b>calmd</b> 用来减少INDELs附近的假杂合。
 <p>
 </p><p>
 </p><p>
 Dump BAQ applied alignment for other SNP callers:
 </p><pre>samtools calmd -bAr aln.bam &gt; aln.baq.bam
 </pre>
-It adds and corrects the
-<b>NM</b>
-and
-<b>MD</b>
-tags at the same time. The
-<b>calmd</b>
-command also comes with the
-<b>-C</b>
-option, the same as the one in
-<b>pileup</b>
-and
-<b>mpileup</b>.
-Apply if it helps.
+该命令同时添加并矫正 <b>NM</b> 和 <b>MD</b> 标签。<b>calmd</b> 命令也有 <b>-C</b> 参数，
+同 <b>pileup</b> 和 <b>mpileup</b> 里面的是一样的。如果有帮助，可以使用它。
 <p>
-</p><h1>LIMITATIONS</h1>
+</p><h1>LIMITATIONS - 限制</h1>
 <p>
 </p><p>
-Unaligned words used in bam_import.c, bam_endian.h, bam.c and bam_aux.c.
+在 bam_import.c, bam_endian.h, bam.c 和 bam_aux.c 中，单词没有对齐。
 </p><p>
-Samtools paired-end rmdup does not work for unpaired reads (e.g. orphan
-reads or ends mapped to different chromosomes). If this is a concern,
-please use Picard's MarkDuplicates which correctly handles these cases,
-although a little slower.
+Samtools 对双端测序的 rmdup 命令对非配对的reads不适用。（例如：孤reads或者两条map到不同染
+色体上的双端测序的reads）.如果要考虑这个的话，请使用 Picard 的 MarkDuplicates ，虽然有一点慢，
+但它能够正确地处理这些情况。
 </p><p>
 </p><h1>AUTHOR</h1>
 <p>
