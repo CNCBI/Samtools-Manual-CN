@@ -731,19 +731,11 @@ samtools merge -rh rg.txt merged.bam ga.bam 454.bam
 </p><pre>samtools mpileup -uf ref.fa aln.bam | bcftools call -mv &gt; var.raw.vcf
 bcftools filter -s LowQual -e '%QUAL&lt;20 || DP&gt;100' var.raw.vcf  &gt; var.flt.vcf
 </pre>
-The
-<b>bcftools filter</b>
-command marks low quality sites and sites with the read depth exceeding
-a limit, which should be adjusted to about twice the average read depth
-(bigger read depths usually indicate problematic regions which are
-often enriched for artefacts).  One may consider to add
-<b>-C50</b>
-to
-<b>mpileup</b>
-if mapping quality is overestimated for reads containing excessive
-mismatches. Applying this option usually helps
-<b>BWA-short</b>
-but may not other mappers.
+<b>bcftools filter</b> 命令会标记低质量的位点，和read深度超过一个限度的位点，
+这个限度应该被调整为大约两倍平均测序深度（更大的read深度通常意味着富含虚假信息的问题区域）。
+对于含有过量mismatch的reads而言，它们mapping的质量如果被高估了的话，分析员可以考虑
+给 <b>mpileup</b> 添加 <b>-C50</b> 。应用这个参数通常对 <b>BWA-short</b> 有所
+帮助，对别的比对软件可能没有帮助。
 <p>
 Individuals are identified from the
 <b>SM</b>
